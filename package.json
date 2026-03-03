@@ -4,6 +4,7 @@
     "build": "vite build",
     "format": "bunx @biomejs/biome check --write",
     "dev": "concurrently 'bun run dev:ui' 'bun run dev:hono' 'bun run dev:elysia'",
+    "preview": "vite preview",
     "dev:ui": "vite",
     "dev:hono": "bun run --hot src/servers/hono",
     "dev:elysia": "bun run --hot src/servers/elysia"
@@ -17,6 +18,7 @@
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
+    "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-solid": "^2.11.10"
   },
   "dependencies": {
