@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "format": "bunx @biomejs/biome check --write",
+    "dev": "concurrently 'bun run dev:ui' 'bun run dev:hono' 'bun run dev:elysia'",
+    "dev:ui": "vite",
+    "dev:hono": "bun run --hot src/servers/hono",
+    "dev:elysia": "bun run --hot src/servers/elysia"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.4",
+    "@tailwindcss/vite": "^4.2.1",
+    "concurrently": "^9.2.1",
+    "daisyui": "^5.5.19",
+    "solid-devtools": "^0.34.5",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-solid": "^2.11.10"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.1",
+    "@elysiajs/eden": "^1.4.8",
+    "@elysiajs/openapi": "^1.4.14",
+    "@hono/zod-validator": "^0.7.6",
+    "@solidjs/router": "^0.15.4",
+    "elysia": "^1.4.26",
+    "hono": "^4.12.3",
+    "solid-js": "^1.9.11",
+    "zod": "^4.3.6"
+  }
+}
